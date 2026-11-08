@@ -1,6 +1,23 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.7.2] - 2026-11-08
+### Added
+* tests: install libc6-dev for fileDac build in mount capability test
+* Makefile: adjust build to work on OSX + Docker Desktop
+* tests: add bats coverage for devMgr device-passthrough feature
+* Update sysbox k8s manifest to use release v0.7.1.
+* tests: verify /proc/uptime survives an lseek(0) rewind
+* tests: install protoc-gen-go-grpc and put protoc on PATH
+* tests: cover buildx sbom generation inside a sysbox container
+* scratch: use absolute submodule URLs.
+* [sysbox-fs] mocks: regenerate NSenterServiceIface for uid/gid params
+* [sysbox-ipc] gpu-passthrough: First devMgr implementation for gpu-passthrough and vpn-tunneling functionality
+* [sysbox-ipc] Transition Makefile's protoc invocations from the deprecated 'plugins=grpc' to the modern '--go_out' and '--go-grpc_out' form
+* [sysbox-mgr] First devMgr implementation for gpu-passthrough and vpn-tunneling functionality
+* [sysbox-pkgr] deb: fix changelog_convert.sh bullet regex
+* [sysbox-runc] gpu-passthrough: First drop
+
 ## [0.7.1] - 2026-07-28
 ### Added
 * Support Sysbox on Ubuntu 24.04 with kernel 6.8+ under containerd 2.x; fixes sysfs mount failures ("mount through procfd: operation not permitted") during container/pod creation (issue #1013).
